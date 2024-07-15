@@ -87,12 +87,32 @@ switch(moth){
 // For - tradução: para
 
 for(var i = 0; i < 10; i++){
-    console.log(i)
+    console.log(i);
 }
 
 // While - tradução: enquanto
 
 var p = 0;
 while( p < 10){
-    console.log(p)
+    console.log(p);
+    p++;
 }
+
+// do...while - tradução: fazer...enquanto
+
+var t = 0;
+
+do{
+    console.log(t);
+    t++
+}while(t>10);
+
+// FUNÇÕES
+
+function sayHello(){
+    console.log("Hello!");
+}
+
+// PROGRAMAÇÃO ORIENTADA A OBJETOS EM JAVASCRIPT
+
+
