@@ -116,3 +116,53 @@ function sayHello(){
 // PROGRAMAÇÃO ORIENTADA A OBJETOS EM JAVASCRIPT
 
 
+
+// ESCOPO DE VARIÁVEIS COM LET E CONST
+
+let movie = 'Lord of the rings - senhor dos anéis'; // 1 - Nessa linha declaramos uma variável movie cujo valor é lord of the rings, e exibimos o seu valor no console essa variável tem um escopo global.
+// var movie = 'batman vs superman';
+function starWarsFan(){
+    const movie = 'star wars - Guerra nas estrelas'; // 2 - Nessa função também foi declarada uma variável chamada movie, a saída dessa função é Star Wars, porque a variável é de escopo local, o que signigica que ela é válida somente dentro da função / bloco de código
+    return movie;
+}
+
+function marvelFan(){
+    movie = 'The Avangers - Os vingadores'; // 3 - 
+    return movie;
+}
+
+function blizzardFan(){
+    const isFan = true;
+    let pharse = 'Warcraft'; // 4 - 
+    console.log(`Before if: ${pharse}`);
+    if(isFan){
+        let pharse = 'initial text'; // 5 - 
+        pharse = 'For the horde! - Para a horda!'; // 6 - 
+        console.log(`Inside if: ${pharse}`);
+    }
+    pharse = 'For the Alliance - para a aliança'; // 7 - 
+    console.log(`After if: ${pharse}`);
+}
+console.log(movie);
+console.log(starWarsFan());
+console.log(marvelFan());
+console.log(movie);
+blizzardFan();
+
+// FUNÇÕES DE SETA
+
+var circleAreaES5 = function circleArea(r){
+    var PI = 3.14;
+    var area = PI * r * r;
+    return area;
+}
+
+//podemos simplificar a sintaxe do código anterior com este código
+
+const circleArea = r =>{
+    const PI = 3.14;
+    const area = PI * r * r;
+    return area;
+}
+console.log(circleArea(2))
+
