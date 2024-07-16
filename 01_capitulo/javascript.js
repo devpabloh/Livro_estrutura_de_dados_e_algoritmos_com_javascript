@@ -166,3 +166,40 @@ const circleArea = r =>{
 }
 console.log(circleArea(2))
 
+// Classes Javascript
+
+class pessoa {
+    constructor(nome, idade){
+        this.nome = nome;
+        this.idade = idade;
+    }
+
+    saudacao(){
+        console.log(`Olá, eu sou ${this.nome}, tenho ${this.idade} anos. `);
+    }
+
+    aniversario(){
+        this.idade += 1;
+    }
+}
+
+class estudante extends pessoa{
+    constructor(nome, idade, curso){
+        super(nome, idade);
+        this.curso = curso;
+
+    }
+
+    saudacao(){
+        console.log(`Olá, meu nome é ${this.nome}, eu tenho ${this.idade} anos e estou estudando ${this.curso}.`);
+    }
+    
+}
+
+const estudante1 = new estudante('Pablo Henrique', 30, 'desenvolvimento front-end');
+estudante1.saudacao();
+
+
+
+
+
