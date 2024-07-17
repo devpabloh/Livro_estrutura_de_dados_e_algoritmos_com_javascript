@@ -149,7 +149,7 @@ console.log(marvelFan());
 console.log(movie);
 blizzardFan();
 
-// FUNÇÕES DE SETA
+// FUNÇÕES DE SETA - ARROW FUNCTION
 
 var circleAreaES5 = function circleArea(r){
     var PI = 3.14;
@@ -165,6 +165,29 @@ const circleArea = r =>{
     return area;
 }
 console.log(circleArea(2))
+
+// VALORES DEFAULT PARA PARÂMETROS DE FUNÇÕES
+
+// com o ES2015 agora podemos definir valores default para os parâmetros das funções, dessa forma:
+
+function sum(x = 1, y = 2, z = 3){
+    return x + y + z;
+}
+
+console.log(sum(4, 2)) // aqui podemos ver que estamos passando dois parametros, porém com a atualização do ES2015, mesmo que não passamos o terceiro paramêtro na chamada da função, nós vamos ter o valor que foi definido lá dentros dos parâmetros, que nesse caso é o Z.
+
+// se fossemos declarar como antigamente esse mesmo código seria dessa forma:
+
+function somar(){
+    if(x === undefined) x = 1;
+    if (y === undefined) y = 2;
+    if (z === undefined) z = 3;
+    return x + y + z;
+}
+
+// DECLARANDO OS OPERADORES DE ESPALHAMENTO E REST
+
+
 
 // Classes Javascript
 
