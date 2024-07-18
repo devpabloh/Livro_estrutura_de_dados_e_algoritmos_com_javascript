@@ -222,7 +222,34 @@ class estudante extends pessoa{
 const estudante1 = new estudante('Pablo Henrique', 30, 'desenvolvimento front-end');
 estudante1.saudacao();
 
+class livro {
+    constructor(title, paginas, identificacao){
+        this.title = title;
+        this.paginas = paginas;
+        this.identificacao = identificacao;
+    }
 
+    imprimir(){
+        console.log(`Identificação: ${this.identificacao}, Titulo do livro é ${this.title} e ele possuí ${this.paginas} páginas.`)
+    }
+}
+
+let book = new livro("Diário de um vampiro", 400, 1 );
+book.imprimir();
+
+class livro2 extends livro{
+    constructor(title, paginas, identificacao, tecnologia){
+        super(title, paginas, identificacao);
+        this.tecnologia = tecnologia;
+    }
+
+    imprimir(){
+        console.log(`Treinado Herança através de classes: identificação do livro: Seu número de identificação é ${this.identificacao} , titulo do livro é ${this.title}, ele possuí ${this.paginas} páginas e que explica sobre a tecnologia ${this.tecnologia}`);
+    }
+}
+
+let book2 = new livro2 ("La casa de papel", 300, 2, "Javascript");
+book2.imprimir();
 
 
 
