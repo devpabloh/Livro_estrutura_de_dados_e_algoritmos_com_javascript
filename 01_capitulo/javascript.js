@@ -205,7 +205,7 @@ class pessoa {
         this.idade += 1;
     }
 }
-
+// herança de classes em javascript
 class estudante extends pessoa{
     constructor(nome, idade, curso){
         super(nome, idade);
@@ -250,6 +250,70 @@ class livro2 extends livro{
 
 let book2 = new livro2 ("La casa de papel", 300, 2, "Javascript");
 book2.imprimir();
+
+// Trabalhando com Getters e Setters
+
+class Person {
+    constructor(name) {
+    this._name = name; // {1}
+    }
+    get name() { // {2}
+    return this._name;
+    }
+    set name(value) { // {3}
+    this._name = value;
+    }
+    }
+    let lotrChar = new Person('Frodo');
+    console.log(lotrChar.name); // {4}
+    lotrChar.name = 'Gandalf'; // {5}
+    console.log(lotrChar.name);
+    lotrChar._name = 'Sam'; // {6}
+    console.log(lotrChar.name);
+
+    // outro exemplo de get e set
+
+    class Livro {
+        constructor(title, paginas, identificacao) {
+            this._title = title;  // Propriedade privada por convenção
+            this.paginas = paginas;
+            this.identificacao = identificacao;
+        }
+    
+        // Getter para 'title'
+        get title() {
+            return this._title;
+        }
+    
+        // Setter para 'title'
+        set title(newTitle) {
+            if (typeof newTitle === 'string' && newTitle.length > 0) {
+                this._title = newTitle;
+            } else {
+                console.log('Título inválido. Deve ser uma string não vazia.');
+            }
+        }
+    
+        imprimir() {
+            console.log(`Identificação: ${this.identificacao}, Título do livro é ${this.title} e ele possui ${this.paginas} páginas.`);
+        }
+    }
+    
+    // Criando uma instância da classe 'Livro'
+    let meuLivro = new Livro("Diário de um vampiro", 400, 1);
+    meuLivro.imprimir();  // Saída: Identificação: 1, Título do livro é Diário de um vampiro e ele possui 400 páginas.
+    
+    // Usando o getter, lembrando são métodos que obtêm o valor de uma propriedade específica. Eles permitem acessar a propriedade como se fosse um atributo comum, mas na verdade, você está chamando uma função.
+    console.log(meuLivro.title);  // Saída: Diário de um vampiro
+    
+    // Usando o setter, lembrando são métodos que definem o valor de uma propriedade específica. Eles permitem validar ou modificar o valor antes de atribuí-lo à propriedade.
+    meuLivro.title = "Novo Título";
+    console.log(meuLivro.title);  // Saída: Novo Título
+    
+    // Tentando definir um título inválido
+    meuLivro.title = "";
+    // Saída: Título inválido. Deve ser uma string não vazia.
+    console.log(meuLivro.title);  // Saída: Novo Título
 
 
 
