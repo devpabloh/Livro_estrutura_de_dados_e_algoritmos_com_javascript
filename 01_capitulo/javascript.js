@@ -315,5 +315,41 @@ class Person {
     // Saída: Título inválido. Deve ser uma string não vazia.
     console.log(meuLivro.title);  // Saída: Novo Título
 
+    // ARRAY
 
+    //Acrescentando elementos na última posição do array
 
+    let numbers = [0,1,2,3,4,5,6,7,8,9];
+    numbers.push(10);
+    /* console.log(numbers); */
+
+    numbers[numbers.length]= 11;
+    console.log(numbers)
+
+    // Acrescentando elementos na primeira posição do Array
+
+    Array.prototype.insertFirstPosition = function(value){
+        for(let i = this.length; i >= 0; i--){
+            this[i] = this[i-1];
+        }
+        this[0] = value;
+    };
+    numbers.insertFirstPosition(-1)
+
+    number.unshift(-2) // Outra forma de adicionar elementos na primeira posição do Array
+
+    // Removendo elementos de um array
+
+    numbers.pop() //para remover um valor do final de um array
+
+    numbers.shift() // remove um elemento do inicio do array
+
+    // Adicionando e removendo elementos de uma posição específica
+
+    numbers.splice(5, 3); // o primeiro valor é a partir de qual indice queremos tirar e o segundo são quantos elementos queremos tirar.
+    // Treinando o que aprendi nos arrays
+    let numbersArray = [1,2,3,4,5,6,7,8,9]
+
+    numbersArray.push(10); //adicionando valores ao final do arrey
+    numbersArray.unshift(-1); // adicionando valores ao inicio de um array
+    console.log(numbersArray);
