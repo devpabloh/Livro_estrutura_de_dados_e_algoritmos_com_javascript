@@ -377,10 +377,9 @@ class Person {
 
     let numbers3 = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
 
-    function isEven3(number3){
-        console.log(number3)
-        return numbers2 % 2 === 0;
+    function isEven3(numbers3){
+        return numbers3 % 2 === 0;
     }
-    const evenNumbers3 = numbers3.filtet(numbers3 % 2 === 0 ? true : false);
+    const evenNumbers3 = numbers3.filter(isEven3);
 
     console.log(evenNumbers3);
