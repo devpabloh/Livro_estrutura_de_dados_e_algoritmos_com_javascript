@@ -383,3 +383,6 @@ class Person {
     const evenNumbers3 = numbers3.filter(isEven3);
 
     console.log(evenNumbers3);
+
+    const isEven4 = numbers3 => numbers3 % 2 === 0;
+    console.log(some(isEven4))
