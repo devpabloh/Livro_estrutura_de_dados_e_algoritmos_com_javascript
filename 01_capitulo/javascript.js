@@ -353,3 +353,26 @@ class Person {
     numbersArray.push(10); //adicionando valores ao final do arrey
     numbersArray.unshift(-1); // adicionando valores ao inicio de um array
     console.log(numbersArray);
+
+
+    let numbers = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
+
+    function isEven(numbers){
+        return numbers.map(number => number % 2 === 0);
+    };
+
+    console.log(isEven(numbers));
+
+    
+
+    function isEven2(number2){
+        
+        return console.log(number2)
+        
+    };
+
+   /*  numbers2.every(isEven2); // itera os elementos do array até que a função devolva false, depois disso ela para.   */
+   let numbers2 = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
+    numbers2.forEach(numbers2 => console.log(numbers2 % 2 === 0)); // itera os alementos do array até que a função devolva true, depois disso ela para.
+
+
