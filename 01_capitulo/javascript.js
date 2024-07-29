@@ -375,4 +375,12 @@ class Person {
    let numbers2 = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
     numbers2.forEach(numbers2 => console.log(numbers2 % 2 === 0)); // itera os alementos do array até que a função devolva true, depois disso ela para.
 
+    let numbers3 = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
 
+    function isEven3(number3){
+        console.log(number3)
+        return numbers2 % 2 === 0;
+    }
+    const evenNumbers3 = numbers3.filtet(numbers3 % 2 === 0 ? true : false);
+
+    console.log(evenNumbers3);
