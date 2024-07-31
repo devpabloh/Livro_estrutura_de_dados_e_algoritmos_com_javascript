@@ -375,7 +375,7 @@ class Person {
    let numbers2 = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
     numbers2.forEach(numbers2 => console.log(numbers2 % 2 === 0)); // itera os alementos do array até que a função devolva true, depois disso ela para.
 
-    let numbers3 = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
+    
 
     function isEven3(numbers3){
         return numbers3 % 2 === 0;
@@ -386,5 +386,18 @@ class Person {
 
     const isEven4 = numbers3 => numbers3 % 2 === 0;
     console.log(some(isEven4))
+
+    let numbers3 = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
+    console.log(numbers3.reduce((previus, current)=> previus + current))
+
+    /* ITERANDO COM O LAÇO FOR...OF 
+    
+    ES2015 introduziu o laço for...of para iterar pelos valores de um array.
+
+    */
+
+    for(const n of numbers3){
+        console.log(n % 2 === 0 ? "par": "impar")
+    }
 
     
